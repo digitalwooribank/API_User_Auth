@@ -40,28 +40,10 @@ GET /oai/wb/v1/finance/getIndivAllAccInfo
 	"dataBody": {
 		"GRID_CNT": 2,
 		"GRID": [{
-			"ACNO": "1002146788200",
-			"PDCD": "0020590000000",
-			"PRD_NM": "우리급여 저축예금",
-			"CUCD": "KRW",
-			"PBOK_BAL": 71888,
-			"WDR_AVL_AM": 0,
-			"NEW_DT": "20120604",
-			"LST_TRN_DT": "20190612",
-			"XPR_DT": "20190612",
-			"ADNT_RGS_YN": "N"
+
 		},
 		{
-			"ACNO": "1002160010529",
-			"PDCD": "0021650000000",
-			"PRD_NM": "우리꿈 저축예금",
-			"CUCD": "KRW",
-			"PBOK_BAL": 0,
-			"WDR_AVL_AM": 0,
-			"NEW_DT": "20190524",
-			"LST_TRN_DT": "20190524",
-			"XPR_DT": "20190524",
-			"ADNT_RGS_YN": "Y"
+
 		}]
 	}
 }
