@@ -1,0 +1,204 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "UNOAPI Swagger Spec. JSON",
+    "version" : "1.0.0",
+    "title" : "UNOAPI"
+  },
+  "host" : "192.168.117.53:8090",
+  "basePath" : "/",
+  "tags" : [ {
+    "name" : "api-list",
+    "description" : "List of APIs"
+  } ],
+  "paths" : {
+    "/oai/wb/v1/login/executeCellCerti" : {
+      "post" : {
+        "tags" : [ "api-list" ],
+        "summary" : "휴대폰 본인확인 문자인증",
+        "operationId" : "_oai_wb_v1_login_executeCellCerti",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "appkey",
+          "in" : "header",
+          "description" : "API Key(제휴사키)",
+          "required" : false
+        }, {
+          "in" : "body",
+          "name" : "REQUEST",
+          "description" : "request body",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/_oai_wb_v1_login_executeCellCerti_REQUEST_1jekzwg8x3j38"
+          }
+        } ],
+        "responses" : {
+          "400" : {
+            "description" : "BAD_REQUEST"
+          },
+          "404" : {
+            "description" : "NOT_FOUND"
+          },
+          "405" : {
+            "description" : "METHOD_NOT_ALLOWED"
+          },
+          "500" : {
+            "description" : "INTERNAL_SERVER_ERROR"
+          },
+          "503" : {
+            "description" : "SERVICE_UNAVAILABLE"
+          },
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/_oai_wb_v1_login_executeCellCerti_RESPONSE_1jxzy3qg3gf91"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "_oai_wb_v1_login_executeCellCerti_REQUEST_1jekzwg8x3j38" : {
+      "type" : "object",
+      "required" : [ "dataBody", "dataHeader" ],
+      "properties" : {
+        "dataHeader" : {
+          "description" : "response data header",
+          "$ref" : "#/definitions/_oai_wb_v1_login_executeCellCerti_dataHeader_t89o331gdfsn"
+        },
+        "dataBody" : {
+          "description" : "response data header",
+          "$ref" : "#/definitions/_oai_wb_v1_login_executeCellCerti_dataBody_1jyda9s9s85yq"
+        }
+      }
+    },
+    "_oai_wb_v1_login_executeCellCerti_dataHeader_t89o331gdfsn" : {
+      "type" : "object",
+      "properties" : {
+        "UTZPE_CNCT_IPAD" : {
+          "type" : "string",
+          "example" : "",
+          "description" : "이용자접속IP주소"
+        },
+        "UTZPE_CNCT_MCHR_UNQ_ID" : {
+          "type" : "string",
+          "example" : "",
+          "description" : "이용자접속기기고유ID"
+        },
+        "UTZPE_CNCT_TEL_NO_TXT" : {
+          "type" : "string",
+          "example" : "",
+          "description" : "이용자접속전화번호"
+        },
+        "UTZPE_CNCT_MCHR_IDF_SRNO" : {
+          "type" : "string",
+          "example" : "",
+          "description" : "이용자접속기기식별일련번호"
+        },
+        "UTZ_MCHR_OS_DSCD" : {
+          "type" : "string",
+          "example" : "",
+          "description" : "이용기기운영체계구분코드"
+        },
+        "UTZ_MCHR_OS_VER_NM" : {
+          "type" : "string",
+          "example" : "",
+          "description" : "이용기기운영체계버전명"
+        },
+        "UTZ_MCHR_MDL_NM" : {
+          "type" : "string",
+          "example" : "",
+          "description" : "이용기기모델명"
+        },
+        "UTZ_MCHR_APP_VER_NM" : {
+          "type" : "string",
+          "example" : "",
+          "description" : "앱 버전"
+        }
+      },
+      "description" : "response data header"
+    },
+    "_oai_wb_v1_login_executeCellCerti_dataBody_1jyda9s9s85yq" : {
+      "type" : "object",
+      "required" : [ "CRTF_UNQ_NO", "ENCY_RRNO_LSNM", "ENCY_SMS_CRTF_NO", "RRNO_BFNB" ],
+      "properties" : {
+        "RRNO_BFNB" : {
+          "type" : "string",
+          "example" : "198812",
+          "description" : "주민번호앞자리"
+        },
+        "ENCY_RRNO_LSNM" : {
+          "type" : "string",
+          "example" : "1041188",
+          "description" : "암호화주민번호뒷자리"
+        },
+        "ENCY_SMS_CRTF_NO" : {
+          "type" : "string",
+          "example" : "1212112",
+          "description" : "암호화SMS인증번호"
+        },
+        "CRTF_UNQ_NO" : {
+          "type" : "string",
+          "example" : "MG4374201711251563655826",
+          "description" : "인증고유번호"
+        }
+      },
+      "description" : "response data header"
+    },
+    "_oai_wb_v1_login_executeCellCerti_RESPONSE_1jxzy3qg3gf91" : {
+      "type" : "object",
+      "required" : [ "dataBody", "dataHeader" ],
+      "properties" : {
+        "dataHeader" : {
+          "description" : "response data header",
+          "$ref" : "#/definitions/_oai_wb_v1_login_executeCellCerti_dataHeader_1iyhps3k3ws34"
+        },
+        "dataBody" : {
+          "description" : "response data header",
+          "$ref" : "#/definitions/_oai_wb_v1_login_executeCellCerti_dataBody_vbpof7na4gtw"
+        }
+      }
+    },
+    "_oai_wb_v1_login_executeCellCerti_dataHeader_1iyhps3k3ws34" : {
+      "type" : "object",
+      "description" : "response data header"
+    },
+    "_oai_wb_v1_login_executeCellCerti_dataBody_vbpof7na4gtw" : {
+      "type" : "object",
+      "properties" : {
+        "CNT" : {
+          "type" : "number",
+          "example" : "1",
+          "description" : "건수"
+        },
+        "REPT_FA" : {
+          "description" : "반복부",
+          "$ref" : "#/definitions/_oai_wb_v1_login_executeCellCerti_REPT_FA_1iyf0q7njqcs8"
+        }
+      },
+      "description" : "response data header"
+    },
+    "_oai_wb_v1_login_executeCellCerti_REPT_FA_1iyf0q7njqcs8" : {
+      "type" : "array",
+      "description" : "반복부",
+      "items" : {
+        "description" : "반복부",
+        "$ref" : "#/definitions/_oai_wb_v1_login_executeCellCerti_REPT_FA_1iv1jsy8ms8xh"
+      }
+    },
+    "_oai_wb_v1_login_executeCellCerti_REPT_FA_1iv1jsy8ms8xh" : {
+      "type" : "object",
+      "required" : [ "CUS_USG_ACNO" ],
+      "properties" : {
+        "CUS_USG_ACNO" : {
+          "type" : "string",
+          "example" : "1002489404684",
+          "description" : "고객사용계좌번호"
+        }
+      },
+      "description" : "반복부"
+    }
+  }
+}
