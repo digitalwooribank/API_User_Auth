@@ -34,18 +34,14 @@ GET /oai/wb/v1/finance/getIndivAllAccInfo
 
 ```json
 {
-	"dataHeader": {
-		
-	},
-	"dataBody": {
-		"GRID_CNT": 2,
-		"GRID": [{
-
-		},
-		{
-
-		}]
-	}
+    "dataHeader": {},
+    "dataBody": {
+        "GRID_CNT": 2,
+        "GRID": [
+            {},
+            {}
+        ]
+    }
 }
 ```
 
