@@ -1,21 +1,21 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "description" : "UNOAPI Swagger Spec. JSON",
+    "description" : "Wooribank API, Wooribank Swagger Spec. JSON",
     "version" : "1.0.0",
-    "title" : "UNOAPI"
+    "title" : "Wooribank API"
   },
-  "host" : "",
+  "host" : "localhost:8080",
   "basePath" : "/",
   "tags" : [ {
-    "name" : "api-list",
-    "description" : "List of APIs"
+    "name" : "List of APIs",
+    "description" : ""
   } ],
   "paths" : {
-    "/oai/wb/v1/login/getCellCerti" : {
+	"/oai/wb/v1/login/getCellCerti" : {
       "post" : {
-        "tags" : [ "api-list" ],
-        "summary" : "휴대폰 본인확인 문자발송",
+        "tags" : [ "List of APIs" ],
+        "summary" : "휴대폰인증발송",
         "operationId" : "_oai_wb_v1_login_getCellCerti",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
@@ -23,6 +23,7 @@
           "name" : "appkey",
           "in" : "header",
           "description" : "API Key(제휴사키)",
+		  "type" : "string",
           "required" : false
         }, {
           "in" : "body",
@@ -60,7 +61,7 @@
     }
   },
   "definitions" : {
-    "_oai_wb_v1_login_getCellCerti_REQUEST_to7dhpyc3587" : {
+	"_oai_wb_v1_login_getCellCerti_REQUEST_to7dhpyc3587" : {
       "type" : "object",
       "required" : [ "dataBody", "dataHeader" ],
       "properties" : {
@@ -131,7 +132,7 @@
         },
         "HP_NO" : {
           "type" : "string",
-          "example" : "01023741144",
+          "example" : "01012345678",
           "description" : "핸드폰번호"
         },
         "HP_CRTF_AGR_YN" : {
@@ -141,17 +142,17 @@
         },
         "FNM" : {
           "type" : "string",
-          "example" : "김순덕",
+          "example" : "홍길동",
           "description" : "성명"
         },
         "RRNO_BFNB" : {
           "type" : "string",
-          "example" : "19881212",
+          "example" : "930216",
           "description" : "주민번호앞6자리"
         },
         "ENCY_RRNO_LSNM" : {
           "type" : "string",
-          "example" : "11041122",
+          "example" : "1234567",
           "description" : "주민번호뒤7자리"
         }
       },
@@ -181,7 +182,7 @@
       "properties" : {
         "CRTF_UNQ_NO" : {
           "type" : "string",
-          "example" : "MG4374201711251563655826",
+          "example" : "MG12345678901234567890",
           "description" : "인증고유번호"
         },
         "VCNT" : {
