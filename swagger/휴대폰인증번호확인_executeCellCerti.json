@@ -1,21 +1,21 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "description" : "UNOAPI Swagger Spec. JSON",
+    "description" : "Wooribank API, Wooribank Swagger Spec. JSON",
     "version" : "1.0.0",
-    "title" : "UNOAPI"
+    "title" : "Wooribank API"
   },
-  "host" : "",
+  "host" : "localhost:8080",
   "basePath" : "/",
   "tags" : [ {
-    "name" : "api-list",
-    "description" : "List of APIs"
+    "name" : "List of APIs",
+    "description" : ""
   } ],
   "paths" : {
-    "/oai/wb/v1/login/executeCellCerti" : {
+	"/oai/wb/v1/login/executeCellCerti" : {
       "post" : {
-        "tags" : [ "api-list" ],
-        "summary" : "휴대폰 본인확인 문자인증",
+        "tags" : [ "List of APIs" ],
+        "summary" : "휴대폰인증번호확인",
         "operationId" : "_oai_wb_v1_login_executeCellCerti",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
@@ -23,6 +23,7 @@
           "name" : "appkey",
           "in" : "header",
           "description" : "API Key(제휴사키)",
+		  "type" : "string",
           "required" : false
         }, {
           "in" : "body",
@@ -59,8 +60,10 @@
       }
     }
   },
+
   "definitions" : {
-    "_oai_wb_v1_login_executeCellCerti_REQUEST_1jekzwg8x3j38" : {
+	
+	"_oai_wb_v1_login_executeCellCerti_REQUEST_1jekzwg8x3j38" : {
       "type" : "object",
       "required" : [ "dataBody", "dataHeader" ],
       "properties" : {
@@ -126,22 +129,22 @@
       "properties" : {
         "RRNO_BFNB" : {
           "type" : "string",
-          "example" : "198812",
+          "example" : "930216",
           "description" : "주민번호앞자리"
         },
         "ENCY_RRNO_LSNM" : {
           "type" : "string",
-          "example" : "1041188",
+          "example" : "1234567",
           "description" : "암호화주민번호뒷자리"
         },
         "ENCY_SMS_CRTF_NO" : {
           "type" : "string",
-          "example" : "1212112",
+          "example" : "1111111",
           "description" : "암호화SMS인증번호"
         },
         "CRTF_UNQ_NO" : {
           "type" : "string",
-          "example" : "MG4374201711251563655826",
+          "example" : "MG12345678901234567890",
           "description" : "인증고유번호"
         }
       },
@@ -194,7 +197,7 @@
       "properties" : {
         "CUS_USG_ACNO" : {
           "type" : "string",
-          "example" : "1002489404684",
+          "example" : "1002456******",
           "description" : "고객사용계좌번호"
         }
       },
